@@ -12,10 +12,20 @@
 
     <!-- select a country  -->
     <!-- < :src="country" -->
+    <!-- v-if="countries.name" :src="countries.name" -->
+
+    <label for="country-select">Select a Country</label>
+    <select id="country-select">
+      <option v-for="(country, index) in countries">
+        {{ country.name }}
+      </option>
+
+
+    </select>
 
 <!-- v-for loop to show name and flag -->
 <p v-for="country in countries">
-<span>{{ country.name }}</span>
+<!-- <span>{{ country.name }}</span> -->
 </p>
 
   </div>
